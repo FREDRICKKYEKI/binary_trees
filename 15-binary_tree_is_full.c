@@ -1,13 +1,13 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_full - function that checks if a binary tree is full
+ * recursive_full - function that performs recursion
  *
  * @tree: pointer to the root node of the tree to check
  *
  * Return: 1 if full, otherwise 0
 */
-int binary_tree_is_full(const binary_tree_t *tree)
+int recursive_full(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (1);
@@ -23,5 +23,23 @@ int binary_tree_is_full(const binary_tree_t *tree)
 
 	/*If the node has only one child*/
 	return (0);
+}
 
+/**
+ * binary_tree_is_full - function that checks if a binary tree is full
+ *
+ * @tree: pointer to the root node of the tree to check
+ *
+ * Return: 1 if full, otherwise 0
+*/
+int binary_tree_is_full(const binary_tree_t *tree)
+{
+	int full;
+
+	if (tree == NULL)
+		return (0);
+
+	full = recursive_full(tree);
+
+	return (full);
 }
