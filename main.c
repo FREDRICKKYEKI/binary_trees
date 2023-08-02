@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include <stdio.h>
 
 /**
  * print_num - Prints a number
