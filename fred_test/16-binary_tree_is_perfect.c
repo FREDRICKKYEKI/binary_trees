@@ -16,7 +16,12 @@ size_t bin_nodes(const binary_tree_t *tree)
 }
 
 /**
+ * power - finds input to the power of given exponential
  *
+ * @num: number to exponentiate (base)
+ * @exp: exponent
+ *
+ * Return: Result
 */
 size_t power(int num, int exp)
 {
@@ -25,7 +30,7 @@ size_t power(int num, int exp)
 	for (i = 1; i < exp; i++)
 		ans = ans * num;
 
-	return ans;
+	return (ans);
 }
 
 /**
