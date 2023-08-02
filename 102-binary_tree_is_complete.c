@@ -9,13 +9,14 @@
 int count_nodes(const binary_tree_t *tree)
 {
 	if (tree == NULL)
-		return(0);
+		return (0);
 
 	return (1 + count_nodes(tree->left) + count_nodes(tree->right));
 }
 
 /**
  * check_complete - checks if  the tree is complete recursively
+ * @tree: the tree to check
  * @index: the index of the current node
  * @nodes: the total number of nodes in the tree
  *
@@ -42,6 +43,7 @@ int check_complete(const binary_tree_t *tree, int index, int nodes)
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
 	int num_nodes, index = 0;
+
 	if (tree == NULL)
 		return (0);
 
